@@ -82,3 +82,15 @@ function scrollHeader(){
   if(this.scrollY >= 10) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
+
+
+// Scroll Reveal Animation
+const sr = ScrollReveal({
+  origin: 'bottom',
+  distance: '30px',
+  duration: 2000,
+  reset: true
+});
+sr.reveal(`.home_container, .work_container, .services_container, .education_container, .portfolio_container, .contact_container, .whyme_container`,{
+  interval: 200
+})
